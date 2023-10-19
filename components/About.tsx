@@ -32,11 +32,11 @@ export default function About({}: Props) {
             <h4 className='text-2xl xl:text-4xl lg:text-4xl font-semibold '>Here is a little  background 
             </h4>
             <p className='text-sm xl:text-xl md:text-xl'>
-            Hi , my name is Jayant Rawat  and I am a student of VIT Bhopal currently studying Bachelors of 
+            Hi , my name is Jayant Rawat  and I am a final year student at VIT Bhopal currently studying Bachelors of 
             Technology in Computer Science. Since an early age I was intrigued by technology and the way it worked 
             hence the interest in this field. I worked in developing android as well as web applications . I am a 
             fullstack developer and I am also interested in Cybersecurity and its application. I am an Certified 
-            Ethical Hacker certified from EC-Council. I also like to do Bug Bounty whenever I get some time where 
+            Ethical Hacker certified from EC-Council and also in top 5% in TryHackMe . I also like to do Bug Bounty whenever I get some time where 
             I test the security of certain websites. I look forward to work as a red teamer working on securing organizations 
             from cyber attacks.So that is all about me .
 

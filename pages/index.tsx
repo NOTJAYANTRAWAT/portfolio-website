@@ -1,7 +1,8 @@
-import type  {NextPage  } from 'next';
+import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect } from 'react'; // Import useEffect hook
 import About from '../components/About';
 import Certification from '../components/Certifications';
 import ContactMe from '../components/ContactMe';
@@ -10,43 +11,54 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
+import axios from 'axios';
 
-const Home: NextPage=() =>{
-  return(
+const Home: NextPage = () => {
+  // Use useEffect to fetch honeypot data when the home page loads
+  useEffect(() => {
+    const fetchHoneypotData = async () => {
+      try {
+        const honeypotUrl = 'http://127.0.0.1:8000/honeypot';
+        const response = await axios.get(honeypotUrl);
+        console.log('Honeypot data:', response.data.message);
+      } catch (error) {
+        console.error('Error fetching honeypot data:', error);
+      }
+    };
+
+    fetchHoneypotData();
+  }, []);
+
+  return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden
     z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-blue'>
       <Head>
-        <title>Jayant Portfolio </title>
+        <title>Jayant Portfolio</title>
       </Head>
-      <Header/>
-      <section id="hero" className='snap-start'>
+      <Header />
+      <section id='hero' className='snap-start'>
         <Hero />
       </section>
-      <section id="about" className='snap-center'>
-        <About/>
+      <section id='about' className='snap-center'>
+        <About />
       </section>
-      <section id="Experience" className='snap-center'>
-          <Experience/>
+      <section id='Experience' className='snap-center'>
+        <Experience />
       </section>
       <section id='Skills' className='snap-start'>
-        <Skills/>
+        <Skills />
       </section>
       <section id='Projects' className='snap-start'>
-        <Projects/>
-      
+        <Projects />
       </section>
       <section id='Certifications' className='snap-start'>
-        <Certification/>
+        <Certification />
       </section>
       <section id='contact' className='snap-start'>
-        <ContactMe/>
+        <ContactMe />
       </section>
-      
-      
-      
-
     </div>
-
   );
 };
-export default Home ;
+
+export default Home;

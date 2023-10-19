@@ -25,7 +25,7 @@ function Project2({}: Props) {
                         <span className='underline decoration-[#F7AB0A]/10}'>
                            Project 2 of 3 : 
                         </span>
-                        Space Explorer
+                        Face Recognition Security
                         </h4>
                         <p className='text-sm text-center md:text-left xl:text-lg'>
                         The National Aeronautics and Space Administration is Americas civil space program and the global leader in 

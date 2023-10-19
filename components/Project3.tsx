@@ -25,7 +25,7 @@ function Project2({}: Props) {
                         <span className='underline decoration-[#F7AB0A]/10}'>
                            Project 3 of 3 : 
                         </span>
-                        Terminal-Portfolio
+                        Network Den
                         </h4>
                         <p className='text-sm text-center md:text-left xl:text-lg'>
                         Who does not like a portfolio website tha looks cool without spending too much time on it.
